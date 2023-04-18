@@ -1,0 +1,202 @@
+\documentclass[12pt,a4paper,landscape]{book}
+\input{config}
+\RequirePackage{fancyhdr}
+
+\begin{document}
+	\pagestyle{fancy}
+	\lhead{\fancyplain{}{\rightmark}}
+	\chead{}
+	\rhead{Tịch Tà Toán Phổ}
+	%-------------------------------------
+	\lfoot{\faMortarBoard{} \LaTeX: Huỳnh Phú Sĩ}
+	\cfoot{\thepage}
+	\rfoot{\faBank{ } Trường THCS-THPT Mỹ Thuận}
+	%-------------------------------------
+	\renewcommand{\headrulewidth}{0.4pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+	\lhead{\fancyplain{}{\color{red}\bf NGUYÊN HÀM, TÍCH PHÂN, ỨNG DỤNG CỦA TÍCH PHÂN}}
+	\begin{multicols*}{3}
+		\begin{khung_trello}{Nguyên hàm}{green}
+			\begin{khung_trello_box}
+				\textbf{\color{trello_bg_green}Tính chất}
+				\begin{itemize}[leftmargin=5mm]
+					\item $\displaystyle\int f'(x)\mathrm{\,d}x=f(x)+C$.
+					\item $\displaystyle\int k\cdot f(x)\mathrm{\,d}x=k\cdot\displaystyle\int f(x)\mathrm{\,d}x$ ($k\neq0$).
+					%\item $\displaystyle\int\big[f(x)\pm g(x)\big]\mathrm{\,d}x=\int f(x)\mathrm{\,d}x\pm\int g(x)\mathrm{\,d}x$.
+				\end{itemize}
+			\end{khung_trello_box}
+			\begin{khung_trello_box}
+				\textbf{\color{trello_bg_green}Bảng nguyên hàm}
+				\begin{itemize}[leftmargin=5mm]
+					\item $\displaystyle\int0\mathrm{\,d}x=C$
+					\item $\displaystyle\int\mathrm{\,d}x=x+C$
+					\item $\displaystyle\int x^n\mathrm{\,d}x=\dfrac{x^{n+1}}{n+1}+C$ ($n\neq-1$)
+					\item $\displaystyle\int\dfrac{1}{x}\mathrm{\,d}x=\ln|x|+C$
+					\item $\displaystyle\int\mathrm{e}^x\mathrm{\,d}x=\mathrm{e}^x+C$
+					\item $\displaystyle\int a^x\mathrm{\,d}x=\dfrac{a^x}{\ln a}+C$ ($0<a\neq1$)
+					\item $\displaystyle\int\cos x\mathrm{\,d}x=\sin x+C$
+					\item $\displaystyle\int\sin x\mathrm{\,d}x=-\cos x+C$
+					\item $\displaystyle\int\dfrac{1}{\cos^2x}\mathrm{\,d}x=\tan x+C$
+					\item $\displaystyle\int\dfrac{1}{\sin^2x}\mathrm{\,d}x=-\cot x+C$
+				\end{itemize}
+			\end{khung_trello_box}
+		\end{khung_trello}
+		\begin{khung_trello}{Tích phân}{orange}
+			\begin{khung_trello_box}
+				\textbf{\color{trello_bg_orange}Định nghĩa}
+				$$\displaystyle\int\limits_{a}^{b}f(x)\mathrm{\,d}x=F(x)\bigg|_a^b=F(b)-F(a)$$
+			\end{khung_trello_box}
+			\begin{khung_trello_box}
+				\textbf{\color{trello_bg_orange}Quy ước}
+				\begin{itemize}[leftmargin=5mm]
+					\item $\displaystyle\int\limits_{a}^{a}f(x)\mathrm{\,d}x=0$
+					\item $\displaystyle\int\limits_{a}^{b}f(x)\mathrm{\,d}x=-\int\limits_{b}^{a}f(x)\mathrm{\,d}x$
+				\end{itemize}
+			\end{khung_trello_box}
+			\begin{khung_trello_box}
+				\textbf{\color{trello_bg_orange}Tính chất}
+				\begin{itemize}[leftmargin=5mm]
+					\item $\displaystyle\int\limits_{a}^{b}f'(x)\mathrm{\,d}x=f(b)-f(a)$.
+					\item $\displaystyle\int\limits_{a}^{b}k\cdot f(x)\mathrm{\,d}x=k\cdot\int\limits_{a}^{b}f(x)\mathrm{\,d}x$.
+					\item $\displaystyle\int\limits_{a}^{c}f(x)\mathrm{\,d}x+\int\limits_{c}^{b}f(x)\mathrm{\,d}x=\int\limits_{a}^{b}f(x)\mathrm{\,d}x$.
+				\end{itemize}
+			\end{khung_trello_box}
+			\begin{khung_trello_box}
+				\textbf{\color{trello_bg_orange}Phương pháp tích phân từng phần}
+				$$\displaystyle\int\limits_{a}^{b}u\cdot v'\mathrm{\,d}x=uv\bigg|_a^b-\int\limits_{a}^{b}u'\cdot v\mathrm{\,d}x$$
+			\end{khung_trello_box}
+		\end{khung_trello}
+		\vfill\null
+		\columnbreak
+		\begin{khung_trello}{Diện tích hình phẳng}{blue}
+			\begin{khung_trello_box}
+				$$S=\displaystyle\int\limits_{a}^{b}\big|f(x)\big|\mathrm{\,d}x$$
+			\end{khung_trello_box}
+			\begin{khung_trello_box}
+				$$S=\displaystyle\int\limits_{a}^{b}\big|f(x)-g(x)\big|\mathrm{\,d}x$$
+			\end{khung_trello_box}
+		\end{khung_trello}
+		\begin{khung_trello}{Thể tích khối tròn xoay}{pink}
+			\begin{khung_trello_box}
+				$$V=\displaystyle\int\limits_{a}^{b}S(x)\mathrm{\,d}x$$
+				\textit{$S(x)$ là diện tích thiết diện mặt cắt}
+			\end{khung_trello_box}
+			\begin{khung_trello_box}
+				$$V=\pi\displaystyle\int\limits_{a}^{b}f^2(x)\mathrm{\,d}x$$
+			\end{khung_trello_box}
+			\begin{khung_trello_box}
+				$$V=\pi\displaystyle\int\limits_{a}^{b}\big[f^2(x)-g^2(x)\big]\mathrm{\,d}x$$
+			\end{khung_trello_box}
+		\end{khung_trello}
+		\begin{khung_trello}{Quãng đường}{violet}
+			\begin{khung_trello_box}
+				$$s=\displaystyle\int\limits_{a}^{b}v(t)\mathrm{\,d}t$$
+				\begin{itemize}[leftmargin=5mm]
+					\item Lúc bắt đầu tính giờ: $t=0$
+					\item Lúc vật dừng hẵn: $v(t)=0$
+				\end{itemize}
+			\end{khung_trello_box}
+		\end{khung_trello}
+	\end{multicols*}
+
+	\newpage
+	\lhead{\fancyplain{}{\color{red}\bf PHƯƠNG PHÁP TỌA ĐỘ TRONG KHÔNG GIAN}}
+	\begin{multicols*}{3}
+		\begin{khung_trello}{Hệ tọa độ $\mathbf{Oxyz}$}{blue}
+			\begin{khung_trello_box}
+				\textbf{\color{trello_bg_blue}Hệ trục tọa độ $\mathbf{Oxyz}$}
+				\begin{itemize}[leftmargin=5mm,label={\color{trello_bg_blue}$\blacksquare$}]
+					\item Gốc tọa độ: $O(0;0;0)$;
+					\item Vectơ đơn vị: $\overrightarrow{i}\in Ox$, $\overrightarrow{j}\in Oy$, $\overrightarrow{k}\in Oz$;
+					\item Trục tọa độ: $Ox$, $Oy$, $Oz$;
+					\item Mặt phẳng tọa độ: $(Oxy)$, $(Oyz)$, $(Oxz)$.
+				\end{itemize}
+			\end{khung_trello_box}
+			\begin{khung_trello_box}
+				Điểm $M\big(x_0;y_0;z_0\big)$ nếu $$\overrightarrow{OM}=x_0\overrightarrow{i}+y_0\overrightarrow{j}+z_0\overrightarrow{k}$$
+			\end{khung_trello_box}
+			\begin{khung_trello_box}
+				Cho hai vectơ $\overrightarrow{a}=\big(a_1;a_2;a_3\big)$, $\overrightarrow{b}=\big(b_1;b_2;b_3\big)$
+				\begin{itemize}[leftmargin=5mm,label={\color{trello_bg_blue}$\heartsuit$}]
+					\item $\overrightarrow{a}\pm\overrightarrow{b}=\big(a_1\pm b_1;a_2\pm b_2;a_3\pm b_3\big)$;
+					\item $k\cdot\overrightarrow{a}=\big(k\cdot a_1;k\cdot a_2;k\cdot a_3\big)$;
+					\item $\overrightarrow{a},\,\overrightarrow{b}$ cùng phương $\exists k$ sao cho $a_1=kb_1$, $a_2=kb_2$, $a_3=kb_3$.
+				\end{itemize}
+			\end{khung_trello_box}
+			\begin{khung_trello_box}
+				\begin{itemize}[leftmargin=5mm,label={\color{trello_bg_blue}$\heartsuit$}]
+					\item $\overrightarrow{AB}=B-A=\big(x_B-x_A;y_B-y_A;z_B-z_A\big)$;
+					\item Trung điểm của đoạn thẳng $AB$ là $$M=\dfrac{A+B}{2}$$
+					\item Trọng tâm của tam giác $ABC$ là $$G=\dfrac{A+B+C}{3}$$
+					\item $ABCD$ là hình bình hành: $A+C=B+D$
+				\end{itemize}
+			\end{khung_trello_box}
+		\end{khung_trello}
+		\begin{khung_trello}{Tích vô hướng}{violet}
+			\begin{khung_trello_box}
+				$$\overrightarrow{a}\cdot\overrightarrow{b}=a_1b_1+a_2b_2+a_3b_3$$
+			\end{khung_trello_box}
+			\begin{khung_trello_box}
+				\textbf{\color{trello_bg_violet}Độ dài vectơ}
+				$$\big|\overrightarrow{a}\big|=\sqrt{a_1^2+a_2^2+a_3^2}$$
+			\end{khung_trello_box}
+			\begin{khung_trello_box}
+				\textbf{\color{trello_bg_violet}Góc giữa hai vectơ}
+				$$\begin{aligned}
+					\cos\big(\overrightarrow{a},\overrightarrow{b}\big)&=\dfrac{\overrightarrow{a}\cdot\overrightarrow{b}}{\big|\overrightarrow{a}\big|\cdot\big|\overrightarrow{b}\big|}\\
+					&\dfrac{a_1b_1+a_2b_2+a_3b_3}{\sqrt{a_1^2+a_2^2+a_3^2}{\color{red}\cdot}\sqrt{b_1^2+b_2^2+b_3^2}}
+				\end{aligned}$$
+				\textit{Lưu ý:} $\overrightarrow{a}\perp\overrightarrow{b}\Leftrightarrow\overrightarrow{a}\cdot\overrightarrow{b}=0$.
+			\end{khung_trello_box}
+		\end{khung_trello}
+		\begin{khung_trello}{Phương trình mặt cầu}{orange}
+			\begin{khung_trello_box}
+				Mặt cầu tâm $I(a;b;c)$, bán kính $R$ có phương trình
+				$$(x-{\color{red}a})^2+(y-{\color{red}b})^2+(z-{\color{red}c})^2={\color{red}R}^2$$
+			\end{khung_trello_box}
+			\begin{khung_trello_box}
+				$$x^2+y^2+z^2-2{\color{red}a}x-2{\color{red}b}y-2{\color{red}c}z+{\color{red}d}=0$$
+				\begin{itemize}[leftmargin=5mm]
+					\item Tâm $I(a;b;c)$;
+					\item Bán kính $R=\sqrt{a^2+b^2+c^2-d}$\\
+						  Điều kiện: $a^2+b^2+c^2-d>0$
+				\end{itemize}
+			\end{khung_trello_box}
+		\end{khung_trello}
+		\vfill\null
+		\columnbreak
+		\begin{khung_trello}{Phương trình mặt phẳng}{pink}
+			\begin{khung_trello_box}
+				\textbf{\color{trello_bg_pink}Vectơ pháp tuyến} của mặt phẳng là vectơ có \textbf{giá} vuông góc với mặt phẳng.
+				\begin{itemize}[leftmargin=5mm]
+					\item Mỗi mặt phẳng có vô số vectơ pháp tuyến;
+					\item Nếu $\overrightarrow{n}=(a;b;c)$ là vectơ pháp tuyến của mặt phẳng $(\alpha)$ thì $k\overrightarrow{n}=(ka;kb;kc)$ cũng là vectơ pháp tuyến của $(\alpha)$.
+				\end{itemize}
+			\end{khung_trello_box}
+			\begin{khung_trello_box}
+				\textbf{\color{trello_bg_pink}Phương trình tổng quát của mặt phẳng}
+				$${\color{red}a}\big(x-x_0\big)+{\color{red}b}\big(y-y_0\big)+{\color{red}c}\big(z-z_0\big)=0$$
+				\begin{itemize}[leftmargin=5mm]
+					\item $\overrightarrow{n}=({\color{red}a};{\color{red}b};{\color{red}c})$ là vectơ pháp tuyến;
+					\item $M\big(x_0;y_0;z_0\big)$ là điểm thuộc mặt phẳng.
+				\end{itemize}
+			\end{khung_trello_box}
+			\begin{khung_trello_box}
+				\textbf{\color{trello_bg_pink}Phương trình đoạn chắn}\\
+				Nếu mặt phẳng $(\alpha)$ cắt $Ox$ tại $A({\color{red}a};0;0)$, cắt $Oy$ tại $B(0;{\color{red}b};0)$ cắt $Oz$ tại $C(0;0;{\color{red}c})$ thì
+				$$(\alpha)\colon\dfrac{x}{\color{red}a}+\dfrac{y}{\color{red}b}+\dfrac{z}{\color{red}c}=1$$
+			\end{khung_trello_box}
+		\end{khung_trello}
+		\begin{khung_trello}{Góc và khoảng cách}{green}
+			\begin{khung_trello_box}
+				\textbf{\color{trello_bg_green}Khoảng cách từ một điểm đến mặt phẳng}
+				%Khoảng cách từ điểm $M\big(x_0;y_0;z_0\big)$ đến mặt phẳng $(\alpha)\colon{\color{red}a}x+{\color{red}b}y+{\color{red}c}z+d=0$ là
+				$$\mathrm{d}\big(M,(\alpha)\big)=\dfrac{{\color{red}\big|}{\color{red}a}x_0+{\color{red}b}y_0+{\color{red}c}z_0+d{\color{red}\big|}}{\sqrt{{\color{red}a}^2+{\color{red}b}^2+{\color{red}c}^2}}$$
+			\end{khung_trello_box}
+			\begin{khung_trello_box}
+				\textbf{\color{trello_bg_green}Góc giữa hai mặt phẳng}
+				$$\cos\big((\alpha),(\beta)\big)=\dfrac{{\color{red}\big|}a_1a_2+b_1b_2+c_1c_2{\color{red}\big|}}{\sqrt{a_1^2+b_1^2+c_1^2}{\color{red}\cdot}\sqrt{a_2^2+b_2^2+c_2^2}}$$
+			\end{khung_trello_box}
+		\end{khung_trello}
+	\end{multicols*}
+\end{document}
