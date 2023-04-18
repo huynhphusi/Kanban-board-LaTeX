@@ -8,7 +8,7 @@ Thiết kế bảng Kanban trong LaTeX, dùng tổng hợp kiến thức rất t
 ## Định nghĩa lệnh
 Màu sắc và các khung văn bản được định nghĩa trong file config.tex, các khung này được custom từ gói lệnh tcolorbox nên cũng không quá xa lạ với người dùng LaTeX.
 
-'''
+```latex
 \definecolor{trello_bg_green}{HTML}{023020}
 \definecolor{trello_bg_blue}{HTML}{191970}
 \definecolor{trello_bg_pink}{HTML}{FF10F0}
@@ -38,4 +38,33 @@ Màu sắc và các khung văn bản được định nghĩa trong file config.t
 	colframe=black,colback=white,boxrule=0pt,enlarge bottom by=-1mm,
 	left=1mm,right=1mm,top=1mm,bottom=0mm
 }
-'''
+```
+
+## Hướng dẫn sử dụng
+Mỗi trang được chia làm 3 cột:
+```latex
+\begin{multicols*}{3}
+	...
+\end{multicols*}
+```
+Để tạo một khung lớn có nội dung "Nguyên hàm" và có màu nền green, ta khai báo:
+```latex
+\begin{khung_trello}{Nguyên hàm}{green}
+	...
+\end{khung_trello}
+```
+Mỗi khối văn bản (nền trắng) được đặt trong môi trường **khung_trello_box**
+```latex
+\begin{khung_trello_box}
+	...
+\end{khung_trello_box}
+```
+Trong một số trường hợp, khung **khung_trello** bị chạy xuống cuối trang, chừa một khoảng trống ở giữa, ta chèn thêm lệnh dưới đây vào:
+```latex
+\vfill\null
+\columnbreak
+```
+Muốn sửa header của riêng trang nào thì ta đặt lệnh sau vào đầu của trang đó
+```latex
+\lhead{\fancyplain{}{\color{red}\bf PHƯƠNG PHÁP TỌA ĐỘ TRONG KHÔNG GIAN}}
+```
